@@ -1,6 +1,7 @@
 ﻿namespace ReportProducer.Services.Reports.Interfaces
 {
-    public interface IGenerateFinanceReport : IGenerateReportBase
+    public interface IGenerateReportBase
     {
+        string Process();
     }
 }

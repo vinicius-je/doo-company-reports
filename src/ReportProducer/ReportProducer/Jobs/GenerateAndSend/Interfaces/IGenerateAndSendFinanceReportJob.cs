@@ -1,6 +1,6 @@
 ﻿namespace ReportProducer.Jobs.GenerateAndSend.Interfaces
 {
-    public interface IGenerateAndSendFinanceReportJob : IGenerateAndSendReportJob
+    public interface IGenerateAndSendFinanceReportJob : IGenerateAndSendReportBaseJob
     {
     }
 }

@@ -13,11 +13,19 @@ namespace ReportProducer.Extensions
     {
         public static void ConfigureDependencyInjection(this IServiceCollection service)
         {
+            #region Services
+            service.AddScoped<IGenerateReportBase, GenerateReportBase>();
             service.AddScoped<IGenerateFinanceReport, GenerateFinanceReport>();
             service.AddScoped<IGenerateOperationReport, GenerateOperationReport>();
             service.AddScoped<ISendReport, SendReport>();
             service.AddScoped<ISaveReport, SaveReport>();
+            #endregion
+
+            #region JOBS
+            service.AddScoped<IGenerateAndSendReportBaseJob, GenerateAndSendReportBaseJob>();
             service.AddScoped<IGenerateAndSendFinanceReportJob, GenerateAndSendFinanceReportJob>();
+            service.AddScoped<IGenerateAndSendOperationReportJob, GenerateAndSendOperationReportJob>();
+            #endregion
         }
     }
 }

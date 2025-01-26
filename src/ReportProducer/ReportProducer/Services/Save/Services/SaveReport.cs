@@ -1,4 +1,5 @@
 ﻿using ReportProducer.Services.Save.Interfaces;
+using System.Text;
 
 namespace ReportProducer.Services.Save.Services
 {
@@ -6,7 +7,9 @@ namespace ReportProducer.Services.Save.Services
     {
         public string Process(string report)
         {
-            string filePath = $"report_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+            StringBuilder sb = new StringBuilder();
+
+            string filePath = $"ReportFiles/report_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
             File.WriteAllText(filePath, report);
             return filePath;
         }

@@ -5,9 +5,9 @@ using ReportProducer.Services.Send.Interfaces;
 
 namespace ReportProducer.Jobs.GenerateAndSend.Services
 {
-    public class GenerateAndSendFinanceReportJob : GenerateAndSendReportBaseJob, IGenerateAndSendFinanceReportJob
+    public class GenerateAndSendOperationReportJob : GenerateAndSendReportBaseJob, IGenerateAndSendOperationReportJob
     {
-        public GenerateAndSendFinanceReportJob(ISendReport send, ISaveReport save, IGenerateFinanceReport report) : base(send, save, report)
+        public GenerateAndSendOperationReportJob(ISendReport send, ISaveReport save, IGenerateOperationReport report) : base(send, save, report)
         {
         }
     }

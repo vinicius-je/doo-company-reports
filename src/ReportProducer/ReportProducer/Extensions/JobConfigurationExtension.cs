@@ -5,9 +5,11 @@ namespace ReportProducer.Extensions
 {
     public static class JobConfigurationExtension
     {
+        [Obsolete]
         public static void ConfiureJobs(this WebApplication app)
         {
-            BackgroundJob.Enqueue<IGenerateAndSendFinanceReportJob>(e => e.Process());
+            RecurringJob.AddOrUpdate<IGenerateAndSendFinanceReportJob>(f => f.Process(), "*/1 * * * *");
+            RecurringJob.AddOrUpdate<IGenerateAndSendOperationReportJob>(o => o.Process(), "*/2 * * * *");
         }
     }
 }
