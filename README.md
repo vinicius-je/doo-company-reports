@@ -7,7 +7,7 @@ A distributed job processing system for financial and operational data managemen
 
 ### Report Generation
 - [x] Generate financial reports
-- [ ] Generate operational reports (in progress)
+- [x] Generate operational reports
 - [x] Save reports to designated storage
 
 ### System Configuration
