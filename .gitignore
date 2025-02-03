@@ -9,6 +9,7 @@
 **/.env
 **/obj/
 **/bin/
+.txt
 bin/
 obj/
 

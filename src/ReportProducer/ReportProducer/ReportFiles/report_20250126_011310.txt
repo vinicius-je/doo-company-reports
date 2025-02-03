@@ -1,7 +1,0 @@
--- Finance Report --
---------------------
-Generate on: 01/26/2025 01:13:10
-Status: Completed
-Revenue: $197423.2130253634
-Expenses: $139711.7138814063
-Profit: $57711.4991439571
