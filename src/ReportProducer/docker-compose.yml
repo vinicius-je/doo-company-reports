@@ -2,12 +2,12 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server
     container_name: ReportProduceDB
+    restart: unless-stopped
     ports:
       - "1434:1433"
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: "1a2b3c4r#$"
-    restart: unless-stopped
 
   reportproducer:
     image: ${DOCKER_REGISTRY-}reportproducer
