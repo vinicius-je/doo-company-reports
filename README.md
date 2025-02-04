@@ -11,8 +11,8 @@ A distributed job processing system for financial and operational data managemen
 - [x] Save reports to designated storage
 
 ### System Configuration
-- [ ] Configure RabbitMQ connection
-- [ ] Set up message queues for finance and operations
+- [x] Configure RabbitMQ connection
+- [x] Set up message queues for finance and operations
 
 ### Data Processing
 - [ ] Receive finance files from RabbitMQ
