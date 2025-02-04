@@ -1,3 +1,7 @@
+networks:
+  doo-network:
+    external: true
+
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server
@@ -8,6 +12,8 @@ services:
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: "1a2b3c4r#$"
+    networks:
+      - doo-network
 
   reportproducer:
     image: ${DOCKER_REGISTRY-}reportproducer
@@ -16,3 +22,7 @@ services:
       dockerfile: ReportProducer/Dockerfile
     depends_on:
       - sqlserver
+    networks:
+      - doo-network
+
+      
