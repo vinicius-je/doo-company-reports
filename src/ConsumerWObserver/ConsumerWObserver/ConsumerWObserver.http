@@ -1,0 +1,6 @@
+@ConsumerWObserver_HostAddress = http://localhost:5259
+
+GET {{ConsumerWObserver_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
